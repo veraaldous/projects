@@ -1,0 +1,2 @@
+JAVA_HOME=/usr/lib/jvm/java-21-openjdk
+JAVA_OPTS="-Xms256m -Xmx512m -Djava.net.preferIPv4Stack=true -Djava.awt.headless=true -XX:+ExitOnOutOfMemoryError"
