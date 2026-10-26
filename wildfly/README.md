@@ -67,3 +67,13 @@ system-wide default Java. The systemd service and manual CLI have separate
 environments.
 
 Ansible automation is planned as a later phase.
+
+## Access from a Windows browser
+
+The application interface listens on all IPv4 interfaces using
+`-b 0.0.0.0`. The management interface remains bound to `127.0.0.1`.
+
+From a Windows computer that can reach the VM, open:
+
+```text
+http://192.168.56.101:8080/hello/
