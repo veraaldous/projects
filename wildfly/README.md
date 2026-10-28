@@ -11,7 +11,8 @@ implemented or tested.
 | Component | Value |
 |---|---|
 | Operating system | Red Hat Enterprise Linux 9.7 |
-| WildFly | 33.0.1.Final |
+| WildFly product | 41.0.1.Final |
+| WildFly Core | 33.0.1.Final |
 | Java | OpenJDK 21 |
 | Installation directory | `/opt/wildfly` |
 | Application account | `wildfly` |
@@ -51,8 +52,11 @@ git clone https://github.com/veraaldous/projects.git
 cd projects
 ```
 
-The remaining examples assume the repository is located at
-`/home/advera/projects`.
+The remaining examples use `/home/advera/projects`, the repository
+location for the `advera` account in this lab. This path is specific
+to the lab account. When rebuilding under another account or
+directory, replace `/home/advera/projects` in the commands with
+the actual absolute repository path.
 
 ## Install Java and required tools
 
@@ -91,7 +95,7 @@ Run as root on a fresh VM:
 ```bash
 cd /var/tmp
 
-WILDFLY_VERSION=33.0.1.Final
+WILDFLY_VERSION=41.0.1.Final
 
 curl -fL \
   -o "wildfly-${WILDFLY_VERSION}.tar.gz" \
@@ -106,7 +110,10 @@ chown -R wildfly:wildfly /opt/wildfly
 restorecon -RF /opt/wildfly
 ```
 
-The fixed version matches the release reported by the existing lab VM.
+The pinned product release is WildFly 41.0.1.Final, matching the
+existing lab VM. Its startup log also reports WildFly Core
+33.0.1.Final. The Core version is a separate component version
+and is not the WildFly distribution version.
 
 ## Install the configuration files
 
