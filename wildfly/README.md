@@ -364,3 +364,9 @@ Planned scope:
 - Run the playbook again and check for unexpected changes.
 
 A delivery date will be recorded after confirmation.
+
+## Step by step guide
+
+[Download the Word guide](docs/WildFly_VM_to_GitHub_Step_by_Step.docx)
+
+The guide covers installation, deployment, validation, troubleshooting, and publishing the lab on GitHub.
