@@ -1,0 +1,2 @@
+NAME      RUNTIME-NAME PERSISTENT ENABLED STATUS 
+hello.war hello.war    false      true    OK     

@@ -1,0 +1,21 @@
+● wildfly.service - WildFly application server lab
+     Loaded: loaded (/etc/systemd/system/wildfly.service; enabled; preset: disabled)
+     Active: active (running) since Wed 2026-10-28 11:50:45 PST; 5min ago
+   Main PID: 1087 (standalone.sh)
+      Tasks: 65 (limit: 22866)
+     Memory: 599.4M (peak: 601.2M)
+        CPU: 53.794s
+     CGroup: /system.slice/wildfly.service
+             ├─1087 /bin/sh /opt/wildfly/bin/standalone.sh -b 0.0.0.0 -bmanagement 127.0.0.1
+             └─1570 /usr/lib/jvm/java-21-openjdk/bin/java "-D[Standalone]" @/opt/wildfly/bin/jdk.serialFilter -Xms256m -Xmx512m -Djava.net.preferIPv4Stack=true -Djava.awt.headless=true -XX:+ExitOnOutOfMemoryError --add-exports=java.desktop/sun.awt=ALL-UNNAMED --add-exports=java.naming/com.sun.jndi.ldap=ALL-UNNAMED --add-exports=java.naming/com.sun.jndi.url.ldap=ALL-UNNAMED --add-exports=java.naming/com.sun.jndi.url.ldaps=ALL-UNNAMED --add-exports=jdk.naming.dns/com.sun.jndi.dns=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.security=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.management/javax.management=ALL-UNNAMED --add-opens=java.naming/javax.naming=ALL-UNNAMED -Dorg.jboss.boot.log.file=/opt/wildfly/standalone/log/server.log -Dlogging.configuration=file:/opt/wildfly/standalone/configuration/logging.properties -jar /opt/wildfly/jboss-modules.jar -mp /opt/wildfly/modules org.jboss.as.standalone -Djboss.home.dir=/opt/wildfly -Djboss.server.base.dir=/opt/wildfly/standalone -b 0.0.0.0 -bmanagement 127.0.0.1
+
+Oct 28 11:50:44 aldouslabn01 standalone.sh[1570]: 11:50:44,499 INFO  [org.wildfly.extension.undertow] (ServerService Thread Pool -- 81) WFLYUT0021: Registered web context: '/hello' for server 'default-server'
+Oct 28 11:50:44 aldouslabn01 standalone.sh[1570]: 11:50:44,588 INFO  [org.jboss.as.server] (ServerService Thread Pool -- 46) WFLYSRV0010: Deployed "hello.war" (runtime-name : "hello.war")
+Oct 28 11:50:44 aldouslabn01 standalone.sh[1570]: 11:50:44,628 INFO  [org.jboss.as.server] (Controller Boot Thread) WFLYSRV0212: Resuming server
+Oct 28 11:50:44 aldouslabn01 standalone.sh[1570]: 11:50:44,633 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0060: Http management interface listening on http://127.0.0.1:9990/management
+Oct 28 11:50:44 aldouslabn01 standalone.sh[1570]: 11:50:44,633 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0051: Admin console listening on http://127.0.0.1:9990
+Oct 28 11:50:44 aldouslabn01 standalone.sh[1570]: 11:50:44,634 INFO  [org.jboss.as] (Controller Boot Thread) WFLYSRV0025: WildFly 41.0.1.Final (WildFly Core 33.0.1.Final) started in 16304ms - Started 407 of 602 services (353 services are lazy, passive or on-demand) - Server configuration file in use: standalone.xml - Minimum feature stability level: community
+Oct 28 11:52:55 aldouslabn01 standalone.sh[1570]: 11:52:55,548 INFO  [lab.wildfly] (default task-2) LAB_REQUEST: /hello/
+Oct 28 11:54:15 aldouslabn01 standalone.sh[1570]: 11:54:15,929 INFO  [lab.wildfly] (default task-2) LAB_REQUEST: /hello/
+Oct 28 11:55:41 aldouslabn01 standalone.sh[1570]: 11:55:41,167 INFO  [lab.wildfly] (default task-2) LAB_REQUEST: /hello/
+Oct 28 11:55:43 aldouslabn01 standalone.sh[1570]: 11:55:43,124 INFO  [lab.wildfly] (default task-2) LAB_REQUEST: /hello/

@@ -1,0 +1,67 @@
+2026-10-28T12:12:15+08:00
+Red Hat Enterprise Linux release 9.7 (Plow)
+Enforcing
+SELINUX=enforcing
+active
+public
+  interfaces: enp0s3 enp0s8
+trusted
+  sources: 192.168.56.0/24
+public (active)
+  target: default
+  icmp-block-inversion: yes
+  interfaces: enp0s3 enp0s8
+  sources: 
+  services: cockpit dhcpv6-client ssh
+  ports: 8000/tcp
+  protocols: 
+  forward: yes
+  masquerade: no
+  forward-ports: 
+  source-ports: 
+  icmp-blocks: 
+  rich rules: 
+	rule protocol value="icmp" accept
+public
+  target: default
+  icmp-block-inversion: yes
+  interfaces: 
+  sources: 
+  services: cockpit dhcpv6-client ssh
+  ports: 8000/tcp
+  protocols: 
+  forward: yes
+  masquerade: no
+  forward-ports: 
+  source-ports: 
+  icmp-blocks: 
+  rich rules: 
+	rule protocol value="icmp" accept
+trusted (active)
+  target: ACCEPT
+  icmp-block-inversion: no
+  interfaces: 
+  sources: 192.168.56.0/24
+  services: 
+  ports: 
+  protocols: 
+  forward: yes
+  masquerade: no
+  forward-ports: 
+  source-ports: 
+  icmp-blocks: 
+  rich rules: 
+trusted (active)
+  target: ACCEPT
+  icmp-block-inversion: no
+  interfaces: 
+  sources: 192.168.56.0/24
+  services: 
+  ports: 
+  protocols: 
+  forward: yes
+  masquerade: no
+  forward-ports: 
+  source-ports: 
+  icmp-blocks: 
+  rich rules: 
